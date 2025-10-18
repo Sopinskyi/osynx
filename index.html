@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ochyro Inc — GSA-X for Google Sheets™</title>
+  <meta name="description" content="GSA-X integrates Samsara with Google Sheets™. Instant row updates, scheduled refreshes, and link generation with end_ms — private by design."/>
+  <meta property="og:title" content="GSA-X — Samsara → Google Sheets™"/>
+  <meta property="og:description" content="Live Samsara locations and correct device links directly in Google Sheets™."/>
+  <meta property="og:type" content="website"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Ochyro home">
+      <span class="logo">OX</span><span>Ochyro Inc</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="gsa-x.html">GSA-X</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <a class="button" href="gsa-x.html">See GSA-X</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="badge">Works with <strong>Google Sheets™</strong></div>
+        <h1>Live Samsara data inside Sheets — with one add-on</h1>
+        <p class="lead">Edit a row → we update location and generate a correct “Open in Samsara” link using a fresh <code>end_ms</code>. Prefer batches? Run a scheduled or manual refresh.</p>
+        <div style="display:flex; gap:.8rem; margin-top:1.1rem; flex-wrap:wrap">
+          <a class="button" href="gsa-x.html">How it works</a>
+          <a class="button secondary" href="mailto:ochyro@osynx.com">Request install link</a>
+        </div>
+        <div class="logos" style="margin-top:1.6rem">
+          <img alt="Google" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Google</text></svg>"/>
+          <img alt="Samsara" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Samsara</text></svg>"/>
+          <img alt="Sheets" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='92' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Sheets</text></svg>"/>
+        </div>
+      </div>
+
+      <aside class="panel" role="img" aria-label="Preview">
+        <div class="card" style="margin-bottom:.9rem">
+          <div class="kicker">Demo</div>
+          <h3 style="margin:.2rem 0 .4rem">Device link preview</h3>
+          <p class="muted">Links include the current <code>end_ms</code> timestamp — open Samsara on “now”, not last week.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:.9rem">
+          <div class="card"><h3>Instant updates</h3><p>Row edits trigger refresh for that row.</p></div>
+          <div class="card"><h3>Bulk “Refresh All”</h3><p>Update the whole table in one run.</p></div>
+          <div class="card"><h3>Your token stays yours</h3><p>Stored in Sheet properties — never sent to Ochyro servers.</p></div>
+          <div class="card"><h3>Admin friendly</h3><p>Enable/disable instant updates per user.</p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="kicker">Why teams choose GSA-X</div>
+      <h2>Sheet-native, reliable, and fast</h2>
+      <div class="grid features">
+        <div class="card"><h3>No desktop installs</h3><p>Everything runs right inside Google Sheets™ via an add-on sidebar.</p></div>
+        <div class="card"><h3>Dropdown guard</h3><p>We only update rows with a valid asset dropdown value.</p></div>
+        <div class="card"><h3>Clear error messages</h3><p>Friendly messages like “endMs is not defined” help you fix quickly.</p></div>
+        <div class="card"><h3>Correct links</h3><p>We generate device links with a live <code>end_ms</code> parameter.</p></div>
+        <div class="card"><h3>Private by design</h3><p>API calls go from your Sheet to Samsara. Ochyro doesn’t proxy.</p></div>
+        <div class="card"><h3>Export anytime</h3><p>Your data lives in your spreadsheet — no lock-in.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Setup</div>
+      <h2>Get started in 5 minutes</h2>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="card"><h3>1) Install</h3><p>We’ll send you an unlisted Marketplace link. Install for your account or domain.</p></div>
+        <div class="card"><h3>2) Configure</h3><p>Paste your write-only Samsara token, org ID, and target Sheet name in the sidebar.</p></div>
+        <div class="card"><h3>3) Update</h3><p>Turn on instant updates or use “Refresh All” for batches.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="kicker">Pricing</div>
+      <h2>Simple plans for any team</h2>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Starter</h3>
+          <div class="price">$0</div>
+          <p class="muted">Private pilot for one Sheet.</p>
+          <ul>
+            <li>Unlisted install link</li>
+            <li>Manual “Refresh All”</li>
+            <li>Email support (best effort)</li>
+          </ul>
+          <div style="margin-top:1rem"><a class="button secondary" href="mailto:ochyro@osynx.com?subject=GSA-X%20Starter">Get started</a></div>
+        </div>
+        <div class="plan pop">
+          <h3>Team</h3>
+          <div class="price">$—</div>
+          <p class="muted">For 1–5 editors, instant updates.</p>
+          <ul>
+            <li>Instant row updates</li>
+            <li>Domain allow-listing</li>
+            <li>Priority support</li>
+          </ul>
+          <div style="margin-top:1rem"><a class="button" href="mailto:ochyro@osynx.com?subject=GSA-X%20Team">Talk to sales</a></div>
+        </div>
+        <div class="plan">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <p class="muted">Security + rollout help.</p>
+          <ul>
+            <li>OAuth verification assistance</li>
+            <li>Admin controls & SSO requirements</li>
+            <li>Onboarding session</li>
+          </ul>
+          <div style="margin-top:1rem"><a class="button secondary" href="mailto:ochyro@osynx.com?subject=GSA-X%20Enterprise">Contact us</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="kicker">FAQ</div>
+      <h2>Answers to common questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Will links always open on “now” in Samsara?</summary>
+          <p>Yes — we include a fresh <code>end_ms</code> timestamp when generating links, so the view aligns to the current time.</p>
+        </details>
+        <details>
+          <summary>Where is my token stored?</summary>
+          <p>In the Sheet’s document properties. It never touches Ochyro servers.</p>
+        </details>
+        <details>
+          <summary>Can we restrict installs to specific users?</summary>
+          <p>Yes. We distribute via unlisted Marketplace links and can enforce allow-lists by domain or email.</p>
+        </details>
+        <details>
+          <summary>Do you support public listing with OAuth verification?</summary>
+          <p>We can help your admin complete Google’s OAuth verification so the add-on installs externally without “unverified” warnings.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="section">
+    <div class="container panel" style="text-align:center">
+      <h2>Ready to try GSA-X?</h2>
+      <p class="muted" style="margin-bottom:1rem">Private by design, fast in practice. We’ll send you an unlisted install link.</p>
+      <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap">
+        <a class="button" href="mailto:ochyro@osynx.com?subject=Request%20GSA-X%20install%20link">Request link</a>
+        <a class="button secondary" href="gsa-x.html">Learn more</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container row">
+    <div>© <span id="y"></span> Ochyro Inc</div>
+    <div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></div>
+    <div class="muted">Google, Google Sheets and Google Workspace are trademarks of Google LLC.</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
