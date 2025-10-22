@@ -3,55 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service – GSA-X by Ochyro Inc</title>
+  <title>Terms of Service — OsynX / GSA-X</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <main>
-    <h1>Terms of Service</h1>
-    <p><strong>Last updated:</strong> 21 Oct 2025</p>
+<header class="site-header">
+  <div class="container flex between">
+    <a class="logo" href="/"><span>Osyn</span>X</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#how">How it works</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a class="active" href="/terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
 
-    <h2>1. Agreement</h2>
-    <p>By installing or using GSA-X, you agree to these Terms.</p>
+<main>
+  <section class="section">
+    <div class="container">
+      <h2>Terms of Service</h2>
+      <p class="desc">Last updated: <span id="d"></span></p>
 
-    <h2>2. The Service</h2>
-    <p>GSA-X is a Google Sheets add-on that retrieves Samsara asset data and inserts it into your spreadsheet upon your request.</p>
+      <div class="card">
+        <h3>1. Acceptance of terms</h3>
+        <p>By installing or using GSA-X, you agree to these Terms and our Privacy Policy.</p>
 
-    <h2>3. Your Responsibilities</h2>
-    <ul>
-      <li>Provide a valid Samsara API token and Org ID and keep them secure.</li>
-      <li>Use GSA-X only in accordance with applicable laws and with Samsara and Google terms.</li>
-    </ul>
+        <h3>2. License</h3>
+        <p>OsynX grants you a non-exclusive, revocable license to use GSA-X within Google Workspace subject to these Terms.</p>
 
-    <h2>4. Data</h2>
-    <ul>
-      <li>Your token/Org ID are stored in the document properties of the spreadsheet where you use the add-on. We do not operate a backend for GSA-X or store your data server-side.</li>
-      <li>Our <a href="/privacy.html">Privacy Policy</a> describes data access and use.</li>
-    </ul>
+        <h3>3. Appropriate use</h3>
+        <ul>
+          <li>You are responsible for your Samsara credentials and permissions.</li>
+          <li>Do not interfere with or misuse Samsara or Google APIs.</li>
+        </ul>
 
-    <h2>5. Third-Party Services</h2>
-    <p>GSA-X relies on Google services and the Samsara API. We do not control those services and are not responsible for their availability or policies.</p>
+        <h3>4. Disclaimers</h3>
+        <p>GSA-X is provided “as is.” OsynX disclaims all warranties to the maximum extent permitted by law.</p>
 
-    <h2>6. Fees</h2>
-    <p>Unless otherwise stated, GSA-X is provided without charge. We may introduce paid features in the future with notice.</p>
+        <h3>5. Limitation of liability</h3>
+        <p>To the extent permitted by law, OsynX will not be liable for indirect or consequential damages arising from your use of GSA-X.</p>
 
-    <h2>7. Disclaimer</h2>
-    <p>THE SERVICE IS PROVIDED “AS IS” WITHOUT WARRANTIES OF ANY KIND.</p>
+        <h3>6. Changes</h3>
+        <p>We may update these Terms; we’ll update the date above. Continued use implies acceptance of the updated Terms.</p>
 
-    <h2>8. Limitation of Liability</h2>
-    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OCHYRO INC SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, OR LOSS OF DATA.</p>
+        <h3>7. Contact</h3>
+        <p>Questions? <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <h2>9. Termination</h2>
-    <p>You may stop using GSA-X at any time. We may suspend or end access if you violate these Terms.</p>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> OsynX Inc. All rights reserved.</p>
+  </div>
+</footer>
 
-    <h2>10. Changes</h2>
-    <p>We may modify these Terms; updates will be posted at this URL with a new “Last updated” date.</p>
-
-    <h2>11. Contact</h2>
-    <p>Email: <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
-
-    <hr />
-    <p>Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara is a trademark of its respective owner. GSA-X is not affiliated with or endorsed by Google™ or Samsara.</p>
-  </main>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('d').textContent=new Date().toLocaleDateString();
+</script>
 </body>
 </html>

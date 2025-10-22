@@ -3,70 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – GSA-X by Ochyro Inc</title>
+  <title>Privacy Policy — OsynX / GSA-X</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <main>
-    <h1>Privacy Policy</h1>
-    <p><strong>Last updated:</strong> 21 Oct 2025</p>
+<header class="site-header">
+  <div class="container flex between">
+    <a class="logo" href="/"><span>Osyn</span>X</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#how">How it works</a>
+      <a href="/support.html">Support</a>
+      <a class="active" href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
 
-    <p>GSA-X is a Google Sheets™ add-on developed by <strong>Ochyro Inc</strong> (“we,” “us,” “our”). This policy explains what data the add-on accesses and how we use it.</p>
+<main>
+  <section class="section">
+    <div class="container">
+      <h2>Privacy Policy</h2>
+      <p class="desc">Last updated: <span id="d"></span></p>
 
-    <h2>What the add-on does</h2>
-    <p>GSA-X lets you look up Samsara assets in Google Sheets, fetch current locations, and insert deep links that open directly in Samsara.</p>
+      <div class="card">
+        <p class="callout"><strong>Summary:</strong> GSA-X reads Samsara data with your token and writes values into your Google Sheet. OsynX does not run backend servers for your data and does not sell your information.</p>
+        <h3>Data we process</h3>
+        <ul>
+          <li>Configuration you enter in the add-on (e.g., Samsara API token, Org ID) is stored in your Sheet’s properties.</li>
+          <li>The add-on requests data from Samsara on demand and writes results into the active sheet.</li>
+          <li>Basic analytics from GitHub Pages (site visits) may be collected by GitHub; see their policy.</li>
+        </ul>
 
-    <h2>Data we access</h2>
-    <ul>
-      <li><strong>Google Sheets data</strong> you select in the spreadsheet where you run the add-on (read/write to the active sheet to populate and refresh rows).</li>
-      <li><strong>Basic Google account info</strong> (<code>userinfo.email</code> and, if enabled, <code>userinfo.profile</code>) to show which account is signed in and for support diagnostics.</li>
-      <li><strong>Locale</strong> (for formatting labels/timestamps).</li>
-      <li><strong>External requests</strong> to the Samsara API you configure (we call <code>https://api.samsara.com/</code> using your API token/Org ID).</li>
-    </ul>
+        <h3>Data retention</h3>
+        <p>OsynX does not store fleet data on OsynX servers. Data you see in Sheets is under your Google account control.</p>
 
-    <h2>How we use data</h2>
-    <ul>
-      <li>Populate and refresh the current spreadsheet’s rows with Samsara asset information at your request.</li>
-      <li>Generate “Open in Samsara” links for convenience.</li>
-      <li>Display your signed-in account in the add-on UI and format content per your locale.</li>
-    </ul>
+        <h3>Security</h3>
+        <p>Your Samsara token permissions determine what can be read. We recommend read-only tokens and rotating them periodically.</p>
 
-    <h2>Where data is stored</h2>
-    <ul>
-      <li><strong>We do not operate any backend servers for GSA-X and do not store Google user data server-side.</strong></li>
-      <li>Your Samsara API token and Org ID are stored locally in the <strong>document properties</strong> of the Google Sheet where you paste them. You can remove them at any time (see “Your choices & deletion”).</li>
-    </ul>
+        <h3>Your choices</h3>
+        <ul>
+          <li>Revoke the Samsara token anytime.</li>
+          <li>Remove the add-on or clear the Sheet properties to delete configuration.</li>
+        </ul>
 
-    <h2>Sharing & selling</h2>
-    <ul>
-      <li>We do not sell or rent your data.</li>
-      <li>We only send requests to the Samsara API you configure, using your token, to fulfill your explicit actions (lookups/refreshes).</li>
-    </ul>
+        <h3>Contact</h3>
+        <p>Questions? <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <h2>Security</h2>
-    <p>All communication with Google and Samsara APIs occurs over HTTPS/TLS. Because GSA-X does not use our own servers, there is no server-side database to breach. You control the token stored in your spreadsheet.</p>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> OsynX Inc. All rights reserved.</p>
+  </div>
+</footer>
 
-    <h2>Your choices & deletion</h2>
-    <ul>
-      <li><strong>Remove credentials:</strong> In the same spreadsheet, delete the add-on’s saved token/Org ID from the settings panel (or clear the document properties).</li>
-      <li><strong>Uninstall the add-on:</strong> Google Sheets → Extensions → Manage add-ons → GSA-X → Uninstall.</li>
-      <li><strong>Revoke OAuth access:</strong> Google Account → Security → Third-party access → GSA-X → Remove access.</li>
-    </ul>
-
-    <h2>Google API Services User Data Policy (Limited Use)</h2>
-    <p>GSA-X’s use of Google user data complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements. We only use the minimum necessary scopes to provide the add-on features, do not transfer Google user data except as needed to fulfill the user’s request, and do not use the data for advertising.</p>
-
-    <h2>Children</h2>
-    <p>GSA-X is not intended for children under 13.</p>
-
-    <h2>Changes</h2>
-    <p>We may update this policy; any changes will be posted at this URL with a new “Last updated” date.</p>
-
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
-
-    <hr />
-    <p>Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara is a trademark of its respective owner. GSA-X is not affiliated with or endorsed by Google™ or Samsara.</p>
-  </main>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('d').textContent=new Date().toLocaleDateString();
+</script>
 </body>
 </html>

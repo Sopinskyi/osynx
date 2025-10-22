@@ -3,36 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Support – GSA-X by Ochyro Inc</title>
+  <title>Support — OsynX / GSA-X</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <main>
-    <h1>Support</h1>
-    <p>Need help with GSA-X? We typically respond within 2 business days.</p>
+<header class="site-header">
+  <div class="container flex between">
+    <a class="logo" href="/"><span>Osyn</span>X</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#how">How it works</a>
+      <a class="active" href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
+<main>
+  <section class="section">
+    <div class="container">
+      <h2>Support</h2>
+      <p class="desc">We’re here to help you get GSA-X running smoothly.</p>
 
-    <h2>Troubleshooting steps</h2>
-    <ol>
-      <li>In Google Sheets, open <strong>Extensions → GSA-X</strong> and verify your Samsara token and Org ID are correct.</li>
-      <li>Try <strong>Refresh All</strong> on a small range first.</li>
-      <li>If needed, remove and re-add the token, then reload the sheet.</li>
-      <li>Check Google Account → <strong>Security → Third-party access</strong> and make sure GSA-X is authorized; remove & re-authorize if necessary.</li>
-    </ol>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="kicker">Quick start</div>
+          <h3>Setup checklist</h3>
+          <div class="table-like">
+            <div class="row">
+              <div class="cell mute">Install</div>
+              <div class="cell">Install the Sheets™ add-on (unlisted link).</div>
+            </div>
+            <div class="row">
+              <div class="cell mute">Token</div>
+              <div class="cell">Create a read-only Samsara API token and copy your Org ID.</div>
+            </div>
+            <div class="row">
+              <div class="cell mute">Configure</div>
+              <div class="cell">Open the add-on sidebar → paste token & Org ID → <em>Save</em>.</div>
+            </div>
+            <div class="row">
+              <div class="cell mute">Test</div>
+              <div class="cell">Pick an asset in a row and click <em>Update</em>. Use <em>Refresh All</em> for batch.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kicker">FAQ</div>
+          <h3>Common questions</h3>
+          <p class="mute"><strong>Where is my token stored?</strong><br/>In your Google Sheet’s properties—never on OsynX servers.</p>
+          <p class="mute"><strong>What permissions are needed?</strong><br/>Read-only access to the Samsara endpoints you use. The add-on itself uses standard Sheets™ and Apps Script scopes.</p>
+          <p class="mute"><strong>I see “unverified app”.</strong><br/>If you’re testing early builds, that’s normal. For public use, we’re completing OAuth verification.</p>
+        </div>
+      </div>
 
-    <h2>Data deletion & access revocation</h2>
-    <ul>
-      <li><strong>Delete saved credentials:</strong> remove the token/Org ID in the add-on settings (or clear the document properties).</li>
-      <li><strong>Uninstall add-on:</strong> Sheets → Extensions → Manage add-ons → GSA-X → Uninstall.</li>
-      <li><strong>Revoke OAuth access:</strong> Google Account → Security → Third-party access → GSA-X → Remove access.</li>
-    </ul>
+      <div class="card" style="margin-top:18px">
+        <div class="kicker">Contact</div>
+        <h3>Need more help?</h3>
+        <p class="mute">Email us at <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a>. Please include a brief description, a screenshot if helpful, and the steps to reproduce.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <p>For privacy details see our <a href="/privacy.html">Privacy Policy</a>. For terms see our <a href="/terms.html">Terms of Service</a>.</p>
-
-    <hr />
-    <p>Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara is a trademark of its respective owner. GSA-X is not affiliated with or endorsed by Google™ or Samsara.</p>
-  </main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> OsynX Inc. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
