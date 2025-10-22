@@ -36,7 +36,7 @@
         <h1>Live Samsara data inside Sheets — with one add-on</h1>
         <p class="lead">Edit a row → we update location and generate a correct “Open in Samsara” link using a fresh <code>end_ms</code>. Prefer batches? Run a scheduled or manual refresh.</p>
         <div style="display:flex; gap:.8rem; margin-top:1.1rem; flex-wrap:wrap">
-          <a class="button" href="gsa-x.html">How it works</a>
+          <a class="button" href="#how">How it works</a>
           <a class="button secondary" href="mailto:ochyro@osynx.com">Request install link</a>
         </div>
         <div class="logos" style="margin-top:1.6rem">
@@ -79,15 +79,40 @@
   </section>
 
   <!-- How it works -->
-  <section class="section">
+  <section id="how" class="section">
     <div class="container">
-      <div class="kicker">Setup</div>
-      <h2>Get started in 5 minutes</h2>
-      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="card"><h3>1) Install</h3><p>We’ll send you an unlisted Marketplace link. Install for your account or domain.</p></div>
-        <div class="card"><h3>2) Configure</h3><p>Paste your write-only Samsara token, org ID, and target Sheet name in the sidebar.</p></div>
-        <div class="card"><h3>3) Update</h3><p>Turn on instant updates or use “Refresh All” for batches.</p></div>
+      <div class="kicker">How it works</div>
+      <h2>How GSA-X works</h2>
+      <p class="desc">Four quick steps to go from zero to live data.</p>
+
+      <ol class="steps">
+        <li><span class="step-num">1</span><strong>Install</strong> the Sheets™ add-on (unlisted Marketplace link).</li>
+        <li><span class="step-num">2</span><strong>Configure</strong> your Samsara <em>API token</em> (read-only) and <em>Org ID</em> in the add-on sidebar.</li>
+        <li><span class="step-num">3</span><strong>Select an asset</strong> from the dropdown to populate your row with fresh data.</li>
+        <li><span class="step-num">4</span><strong>Refresh All</strong> to batch update every populated asset row.</li>
+      </ol>
+
+      <div class="grid grid-3" style="margin-top:22px">
+        <div class="card">
+          <div class="kicker">Inside Sheets™</div>
+          <h3>Sidebar settings</h3>
+          <p class="mute">Paste your token &amp; Org ID once. Credentials are stored in your sheet’s properties.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Read-only</div>
+          <h3>Samsara API</h3>
+          <p class="mute">We request data with your token—no OsynX/Ochyro servers involved, nothing persisted.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Local to you</div>
+          <h3>Write to cells</h3>
+          <p class="mute">The add-on writes values into the active sheet; you control what’s stored.</p>
+        </div>
       </div>
+
+      <p class="note" style="margin-top:14px">
+        Note: Requires a valid Samsara API token with read permissions. Data is fetched on-demand; nothing is stored outside your spreadsheet.
+      </p>
     </div>
   </section>
 
