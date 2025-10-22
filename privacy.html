@@ -2,47 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Privacy Policy — Ochyro Inc / GSA-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>body{font:16px/1.5 system-ui,Arial,sans-serif;max-width:820px;margin:40px auto;padding:0 16px;color:#222}</style>
-  <link rel="stylesheet" href="style.css">
+  <title>Privacy Policy – GSA-X by Ochyro Inc</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Effective date:</strong> 2025-10-15</p>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated:</strong> 21 Oct 2025</p>
 
-  <h2>Overview</h2>
-  <p>GSA-X is a Google Sheets™ add-on published by Ochyro Inc. The add-on runs entirely
-     within your Google account. Ochyro Inc does not operate any backend that collects
-     or stores your data.</p>
+    <p>GSA-X is a Google Sheets™ add-on developed by <strong>Ochyro Inc</strong> (“we,” “us,” “our”). This policy explains what data the add-on accesses and how we use it.</p>
 
-  <h2>Data we access</h2>
-  <ul>
-    <li><strong>Google Sheets content</strong> you open the add-on in, to read and write cells per your actions.</li>
-    <li><strong>Document Properties</strong> to store your Samsara API token within the Sheet file you configure.</li>
-    <li><strong>External requests</strong> to Samsara APIs to fetch locations/ids you request.</li>
-  </ul>
+    <h2>What the add-on does</h2>
+    <p>GSA-X lets you look up Samsara assets in Google Sheets, fetch current locations, and insert deep links that open directly in Samsara.</p>
 
-  <h2>Data we store</h2>
-  <p>We (Ochyro Inc) do not store or transmit your data to our servers. Your Samsara token is saved in the
-     active Sheet’s Document Properties and remains under your control. You can remove it at any time by
-     clearing the setting in the sidebar or deleting the document property.</p>
+    <h2>Data we access</h2>
+    <ul>
+      <li><strong>Google Sheets data</strong> you select in the spreadsheet where you run the add-on (read/write to the active sheet to populate and refresh rows).</li>
+      <li><strong>Basic Google account info</strong> (<code>userinfo.email</code> and, if enabled, <code>userinfo.profile</code>) to show which account is signed in and for support diagnostics.</li>
+      <li><strong>Locale</strong> (for formatting labels/timestamps).</li>
+      <li><strong>External requests</strong> to the Samsara API you configure (we call <code>https://api.samsara.com/</code> using your API token/Org ID).</li>
+    </ul>
 
-  <h2>Third-party services</h2>
-  <ul>
-    <li>Google Workspace APIs (Apps Script, Sheets).</li>
-    <li>Samsara APIs.</li>
-  </ul>
+    <h2>How we use data</h2>
+    <ul>
+      <li>Populate and refresh the current spreadsheet’s rows with Samsara asset information at your request.</li>
+      <li>Generate “Open in Samsara” links for convenience.</li>
+      <li>Display your signed-in account in the add-on UI and format content per your locale.</li>
+    </ul>
 
-  <h2>Security</h2>
-  <p>We request only the minimum Google OAuth scopes needed for the add-on to function.
-     Access is limited to the active spreadsheet and executing external requests you initiate.</p>
+    <h2>Where data is stored</h2>
+    <ul>
+      <li><strong>We do not operate any backend servers for GSA-X and do not store Google user data server-side.</strong></li>
+      <li>Your Samsara API token and Org ID are stored locally in the <strong>document properties</strong> of the Google Sheet where you paste them. You can remove them at any time (see “Your choices & deletion”).</li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:support@osynx.com">support@osynx.com</a></p>
+    <h2>Sharing & selling</h2>
+    <ul>
+      <li>We do not sell or rent your data.</li>
+      <li>We only send requests to the Samsara API you configure, using your token, to fulfill your explicit actions (lookups/refreshes).</li>
+    </ul>
 
-  <p style="font-size:12px;margin-top:32px">
-    Google Sheets™ is a trademark of Google LLC. Samsara is a trademark of Samsara Inc.
-  </p>
+    <h2>Security</h2>
+    <p>All communication with Google and Samsara APIs occurs over HTTPS/TLS. Because GSA-X does not use our own servers, there is no server-side database to breach. You control the token stored in your spreadsheet.</p>
+
+    <h2>Your choices & deletion</h2>
+    <ul>
+      <li><strong>Remove credentials:</strong> In the same spreadsheet, delete the add-on’s saved token/Org ID from the settings panel (or clear the document properties).</li>
+      <li><strong>Uninstall the add-on:</strong> Google Sheets → Extensions → Manage add-ons → GSA-X → Uninstall.</li>
+      <li><strong>Revoke OAuth access:</strong> Google Account → Security → Third-party access → GSA-X → Remove access.</li>
+    </ul>
+
+    <h2>Google API Services User Data Policy (Limited Use)</h2>
+    <p>GSA-X’s use of Google user data complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements. We only use the minimum necessary scopes to provide the add-on features, do not transfer Google user data except as needed to fulfill the user’s request, and do not use the data for advertising.</p>
+
+    <h2>Children</h2>
+    <p>GSA-X is not intended for children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy; any changes will be posted at this URL with a new “Last updated” date.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a></p>
+
+    <hr />
+    <p>Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara is a trademark of its respective owner. GSA-X is not affiliated with or endorsed by Google™ or Samsara.</p>
+  </main>
 </body>
 </html>
