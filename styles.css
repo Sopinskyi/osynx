@@ -31,6 +31,9 @@ a:hover{opacity:.9}
 }
 .logo{font-weight:700;letter-spacing:.5px;color:#fff}
 .logo span{color:var(--accent)}
+/* NEW: brand + nav wrappers used in HTML */
+.brand{display:inline-flex;gap:10px;align-items:center;color:#fff;font-weight:700}
+.nav{display:flex;align-items:center;gap:18px}
 nav a{color:var(--text);opacity:.9;margin-left:18px}
 nav a.active{color:var(--accent)}
 
@@ -42,12 +45,16 @@ nav a.active{color:var(--accent)}
 .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 14px}
 .lead{color:var(--muted);max-width:760px}
 .cta-row{margin-top:24px}
-.btn{
+
+/* Buttons: keep .btn, add .button alias for HTML consistency */
+.btn,
+.button{
   display:inline-flex;align-items:center;gap:10px;
   background:var(--accent);color:#081223;font-weight:600;
   padding:12px 18px;border-radius:10px;border:1px solid transparent
 }
-.btn.secondary{background:transparent;border-color:var(--border);color:var(--text)}
+.btn.secondary,
+.button.secondary{background:transparent;border-color:var(--border);color:var(--text)}
 .badge{display:inline-block;background:var(--panel-2);border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
 
 /* ---------- Generic Section ---------- */
@@ -69,6 +76,19 @@ nav a.active{color:var(--accent)}
 .card h3{margin:0 0 6px}
 .kicker{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.12em}
 
+/* NEW: .panel container (used in index hero + closing CTA) */
+.panel{
+  background:var(--panel-2);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+/* NEW: logo row styling used in index */
+.logos{display:flex;gap:18px;align-items:center;opacity:.9}
+.logos img{height:24px}
+
 /* ---------- Steps ---------- */
 .steps{display:grid;gap:14px;margin:20px 0 0;padding:0;list-style:none}
 .steps li{
@@ -85,9 +105,17 @@ nav a.active{color:var(--accent)}
 
 /* ---------- Helpers ---------- */
 .mute{color:var(--muted)}
+/* NEW: alias for mixed usage across pages */
+.muted{color:var(--muted)}
 .note{font-size:14px;color:var(--muted)}
 .callout{border-left:3px solid var(--accent);padding-left:12px}
 .table-like{border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .table-like .row{display:grid;grid-template-columns:220px 1fr;border-top:1px solid var(--border)}
 .table-like .row:first-child{border-top:0}
 .table-like .cell{padding:12px 14px}
+
+/* ---------- Accessibility ---------- */
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

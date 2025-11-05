@@ -4,10 +4,10 @@
   <link rel="canonical" href="https://osynx.com/" />
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Ochyro Inc — GSA-X for Google Sheets™</title>
-  <meta name="description" content="GSA-X integrates Samsara with Google Sheets™. Instant row updates, scheduled refreshes, and link generation with end_ms — private by design."/>
-  <meta property="og:title" content="GSA-X — Samsara → Google Sheets™"/>
-  <meta property="og:description" content="Live Samsara locations and correct device links directly in Google Sheets™."/>
+  <title>Ochyro Inc — OsynX Bridge for Google Sheets™</title>
+  <meta name="description" content="OsynX Bridge integrates Samsara™ with Google Sheets™ for instant row updates, deep links with fresh end_ms, and bulk refreshes — private by design."/>
+  <meta property="og:title" content="OsynX Bridge — Samsara™ → Google Sheets™"/>
+  <meta property="og:description" content="Live Samsara™ data and correct device links directly in Google Sheets™."/>
   <meta property="og:type" content="website"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -21,10 +21,10 @@
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="gsa-x.html">GSA-X</a>
+      <a href="osynx-bridge.html">OsynX Bridge</a>
       <a href="support.html">Support</a>
     </nav>
-    <a class="button" href="gsa-x.html">See GSA-X</a>
+    <a class="button" href="osynx-bridge.html">See OsynX Bridge</a>
   </div>
 </header>
 
@@ -34,11 +34,14 @@
     <div class="container wrap">
       <div>
         <div class="badge">Works with <strong>Google Sheets™</strong></div>
-        <h1>Live Samsara data inside Sheets — with one add-on</h1>
-        <p class="lead">Edit a row → we update location and generate a correct “Open in Samsara” link using a fresh <code>end_ms</code>. Prefer batches? Run a scheduled or manual refresh.</p>
+        <h1>Live Samsara™ data inside Sheets — with one add-on</h1>
+        <p class="lead">
+          Edit a row → we update location and generate a correct “Open in Samsara™” link using a fresh
+          <code>end_ms</code>. Prefer batches? Run a scheduled or manual refresh.
+        </p>
         <div style="display:flex; gap:.8rem; margin-top:1.1rem; flex-wrap:wrap">
           <a class="button" href="#how">How it works</a>
-          <a class="button secondary" href="mailto:ochyro@osynx.com">Request install link</a>
+          <a class="button secondary" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Install%20Request">Request install link</a>
         </div>
         <div class="logos" style="margin-top:1.6rem">
           <img alt="Google" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Google</text></svg>"/>
@@ -51,7 +54,7 @@
         <div class="card" style="margin-bottom:.9rem">
           <div class="kicker">Demo</div>
           <h3 style="margin:.2rem 0 .4rem">Device link preview</h3>
-          <p class="muted">Links include the current <code>end_ms</code> timestamp — open Samsara on “now”, not last week.</p>
+          <p class="muted">Links include the current <code>end_ms</code> timestamp — open Samsara™ on “now”, not last week.</p>
         </div>
         <div class="grid" style="grid-template-columns:1fr 1fr; gap:.9rem">
           <div class="card"><h3>Instant updates</h3><p>Row edits trigger refresh for that row.</p></div>
@@ -66,14 +69,14 @@
   <!-- Features -->
   <section id="features" class="section">
     <div class="container">
-      <div class="kicker">Why teams choose GSA-X</div>
+      <div class="kicker">Why teams choose OsynX Bridge</div>
       <h2>Sheet-native, reliable, and fast</h2>
       <div class="grid features">
         <div class="card"><h3>No desktop installs</h3><p>Everything runs right inside Google Sheets™ via an add-on sidebar.</p></div>
         <div class="card"><h3>Dropdown guard</h3><p>We only update rows with a valid asset dropdown value.</p></div>
         <div class="card"><h3>Clear error messages</h3><p>Friendly messages like “endMs is not defined” help you fix quickly.</p></div>
         <div class="card"><h3>Correct links</h3><p>We generate device links with a live <code>end_ms</code> parameter.</p></div>
-        <div class="card"><h3>Private by design</h3><p>API calls go from your Sheet to Samsara. Ochyro doesn’t proxy.</p></div>
+        <div class="card"><h3>Private by design</h3><p>API calls go from your Sheet to Samsara™. Ochyro doesn’t proxy.</p></div>
         <div class="card"><h3>Export anytime</h3><p>Your data lives in your spreadsheet — no lock-in.</p></div>
       </div>
     </div>
@@ -83,12 +86,12 @@
   <section id="how" class="section">
     <div class="container">
       <div class="kicker">How it works</div>
-      <h2>How GSA-X works</h2>
+      <h2>How OsynX Bridge works</h2>
       <p class="desc">Four quick steps to go from zero to live data.</p>
 
       <ol class="steps">
-        <li><span class="step-num">1</span><strong>Install</strong> the Sheets™ add-on (unlisted Marketplace link).</li>
-        <li><span class="step-num">2</span><strong>Configure</strong> your Samsara <em>API token</em> (read-only) and <em>Org ID</em> in the add-on sidebar.</li>
+        <li><span class="step-num">1</span><strong>Install</strong> the Sheets™ add-on (unlisted Marketplace link provided by email).</li>
+        <li><span class="step-num">2</span><strong>Configure</strong> your Samsara™ <em>API token</em> (read-only) and <em>Org ID</em> in the add-on sidebar.</li>
         <li><span class="step-num">3</span><strong>Select an asset</strong> from the dropdown to populate your row with fresh data.</li>
         <li><span class="step-num">4</span><strong>Refresh All</strong> to batch update every populated asset row.</li>
       </ol>
@@ -101,8 +104,8 @@
         </div>
         <div class="card">
           <div class="kicker">Read-only</div>
-          <h3>Samsara API</h3>
-          <p class="mute">We request data with your token—no OsynX/Ochyro servers involved, nothing persisted.</p>
+          <h3>Samsara™ API</h3>
+          <p class="mute">We request data with your token — no OsynX/Ochyro servers involved, nothing persisted.</p>
         </div>
         <div class="card">
           <div class="kicker">Local to you</div>
@@ -112,7 +115,7 @@
       </div>
 
       <p class="note" style="margin-top:14px">
-        Note: Requires a valid Samsara API token with read permissions. Data is fetched on-demand; nothing is stored outside your spreadsheet.
+        Note: Requires a valid Samsara™ API token with read permissions. Data is fetched on-demand; nothing is stored outside your spreadsheet.
       </p>
     </div>
   </section>
@@ -128,11 +131,13 @@
           <div class="price">$0</div>
           <p class="muted">Private pilot for one Sheet.</p>
           <ul>
-            <li>Unlisted install link</li>
+            <li>Unlisted install link via email</li>
             <li>Manual “Refresh All”</li>
             <li>Email support (best effort)</li>
           </ul>
-          <div style="margin-top:1rem"><a class="button secondary" href="mailto:ochyro@osynx.com?subject=GSA-X%20Starter">Get started</a></div>
+          <div style="margin-top:1rem">
+            <a class="button secondary" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Starter">Get started</a>
+          </div>
         </div>
         <div class="plan pop">
           <h3>Team</h3>
@@ -143,7 +148,9 @@
             <li>Domain allow-listing</li>
             <li>Priority support</li>
           </ul>
-          <div style="margin-top:1rem"><a class="button" href="mailto:ochyro@osynx.com?subject=GSA-X%20Team">Talk to sales</a></div>
+          <div style="margin-top:1rem">
+            <a class="button" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Team">Talk to sales</a>
+          </div>
         </div>
         <div class="plan">
           <h3>Enterprise</h3>
@@ -151,10 +158,12 @@
           <p class="muted">Security + rollout help.</p>
           <ul>
             <li>OAuth verification assistance</li>
-            <li>Admin controls & SSO requirements</li>
+            <li>Admin controls &amp; SSO requirements</li>
             <li>Onboarding session</li>
           </ul>
-          <div style="margin-top:1rem"><a class="button secondary" href="mailto:ochyro@osynx.com?subject=GSA-X%20Enterprise">Contact us</a></div>
+          <div style="margin-top:1rem">
+            <a class="button secondary" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Enterprise">Contact us</a>
+          </div>
         </div>
       </div>
     </div>
@@ -167,7 +176,7 @@
       <h2>Answers to common questions</h2>
       <div class="faq">
         <details>
-          <summary>Will links always open on “now” in Samsara?</summary>
+          <summary>Will links always open on “now” in Samsara™?</summary>
           <p>Yes — we include a fresh <code>end_ms</code> timestamp when generating links, so the view aligns to the current time.</p>
         </details>
         <details>
@@ -189,11 +198,11 @@
   <!-- Closing CTA -->
   <section class="section">
     <div class="container panel" style="text-align:center">
-      <h2>Ready to try GSA-X?</h2>
+      <h2>Ready to try OsynX Bridge?</h2>
       <p class="muted" style="margin-bottom:1rem">Private by design, fast in practice. We’ll send you an unlisted install link.</p>
       <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap">
-        <a class="button" href="mailto:ochyro@osynx.com?subject=Request%20GSA-X%20install%20link">Request link</a>
-        <a class="button secondary" href="gsa-x.html">Learn more</a>
+        <a class="button" href="mailto:ochyro@osynx.com?subject=Request%20OsynX%20Bridge%20install%20link">Request link</a>
+        <a class="button secondary" href="osynx-bridge.html">Learn more</a>
       </div>
     </div>
   </section>
@@ -203,7 +212,9 @@
   <div class="container row">
     <div>© <span id="y"></span> Ochyro Inc</div>
     <div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></div>
-    <div class="muted">Google, Google Sheets and Google Workspace are trademarks of Google LLC.</div>
+    <div class="muted">
+      Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara™ is a trademark of its respective owner. OsynX Bridge is not affiliated with or endorsed by Google LLC or Samsara™.
+    </div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>

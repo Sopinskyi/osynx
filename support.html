@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Support — OsynX / GSA-X</title>
+  <title>Support — OsynX Bridge</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
   <section class="section">
     <div class="container">
       <h2>Support</h2>
-      <p class="desc">We’re here to help you get GSA-X running smoothly.</p>
+      <p class="desc">We’re here to help you get OsynX Bridge running smoothly.</p>
 
       <div class="grid grid-2">
         <div class="card">
@@ -33,11 +33,11 @@
           <div class="table-like">
             <div class="row">
               <div class="cell mute">Install</div>
-              <div class="cell">Install the Sheets™ add-on (unlisted link).</div>
+              <div class="cell">Install the Google Sheets™ add-on (unlisted link provided by email).</div>
             </div>
             <div class="row">
               <div class="cell mute">Token</div>
-              <div class="cell">Create a read-only Samsara API token and copy your Org ID.</div>
+              <div class="cell">Create a read-only Samsara™ API token and copy your Org ID.</div>
             </div>
             <div class="row">
               <div class="cell mute">Configure</div>
@@ -45,23 +45,24 @@
             </div>
             <div class="row">
               <div class="cell mute">Test</div>
-              <div class="cell">Pick an asset in a row and click <em>Update</em>. Use <em>Refresh All</em> for batch.</div>
+              <div class="cell">Pick an asset in a row and click <em>Update</em>. Use <em>Refresh All</em> for batch updates.</div>
             </div>
           </div>
         </div>
+
         <div class="card">
           <div class="kicker">FAQ</div>
           <h3>Common questions</h3>
-          <p class="mute"><strong>Where is my token stored?</strong><br/>In your Google Sheet’s properties—never on OsynX servers.</p>
-          <p class="mute"><strong>What permissions are needed?</strong><br/>Read-only access to the Samsara endpoints you use. The add-on itself uses standard Sheets™ and Apps Script scopes.</p>
-          <p class="mute"><strong>I see “unverified app”.</strong><br/>If you’re testing early builds, that’s normal. For public use, we’re completing OAuth verification.</p>
+          <p class="mute"><strong>Where is my token stored?</strong><br/>In your Google Sheet’s document properties—never on OsynX servers.</p>
+          <p class="mute"><strong>What permissions are needed?</strong><br/>Read-only access to the Samsara™ endpoints you use. The add-on itself uses standard Sheets™ and Apps Script scopes (spreadsheets, container.ui, external_request, scriptapp).</p>
+          <p class="mute"><strong>I see “unverified app”.</strong><br/>If you’re testing early builds, that’s normal. For public use, we are completing Google’s OAuth verification.</p>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
         <div class="kicker">Contact</div>
         <h3>Need more help?</h3>
-        <p class="mute">Email us at <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a>. Please include a brief description, a screenshot if helpful, and the steps to reproduce.</p>
+        <p class="mute">Email us at <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a>. Include a brief description, a screenshot if helpful, and steps to reproduce.</p>
       </div>
     </div>
   </section>
@@ -69,7 +70,8 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>© <span id="y"></span> OsynX Inc. All rights reserved.</p>
+    <p>© <span id="y"></span> Ochyro Inc. All rights reserved.</p>
+    <p class="muted">Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara™ is a trademark of its respective owner. OsynX Bridge is not affiliated with or endorsed by Google LLC or Samsara™.</p>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>

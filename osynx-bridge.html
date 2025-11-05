@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://osynx.com/osynx-bridge.html" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OsynX Bridge — Google Sheets™ add-on for Samsara™</title>
+  <meta name="description" content="OsynX Bridge brings Samsara™ fleet data into Google Sheets™. Single-row updates, bulk refresh, and direct deep links—private by design."/>
+  <meta property="og:title" content="OsynX Bridge — Samsara™ → Google Sheets™"/>
+  <meta property="og:description" content="Look up assets, update rows, and open ‘now’ in Samsara™ right from Google Sheets™."/>
+  <meta property="og:type" content="website"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Ochyro home">
+      <span class="logo">OX</span><span>Ochyro Inc</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="active" href="osynx-bridge.html">OsynX Bridge</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <a class="button" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Install%20Request">Request install link</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="badge">Works with <strong>Google Sheets™</strong></div>
+        <h1>OsynX Bridge — Samsara™ data in your Sheet</h1>
+        <p class="lead">
+          Select an asset, update a row, and open the right device view in Samsara™ with a fresh
+          <code>end_ms</code>. Run “Refresh All” for bulk updates—no servers, just your Sheet.
+        </p>
+        <div class="cta-row">
+          <a class="button" href="#how">How it works</a>
+          <a class="button secondary" href="mailto:ochyro@osynx.com?subject=OsynX%20Bridge%20Install%20Request">Request install link</a>
+        </div>
+
+        <div class="logos" style="margin-top:1.6rem">
+          <img alt="Google"  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Google</text></svg>"/>
+          <img alt="Samsara" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Samsara</text></svg>"/>
+          <img alt="Sheets"  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='92' height='24'><text x='0' y='18' font-family='system-ui,Segoe UI,Arial' font-size='18'>Sheets</text></svg>"/>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Product preview">
+        <div class="card" style="margin-bottom:.9rem">
+          <div class="kicker">Preview</div>
+          <h3 style="margin:.2rem 0 .4rem">Deep links that open on “now”</h3>
+          <p class="muted">We include the current <code>end_ms</code> in device links so your Samsara™ view is current.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:.9rem">
+          <div class="card"><h3>Single-row update</h3><p>Choose an asset; we populate that row instantly.</p></div>
+          <div class="card"><h3>Bulk “Refresh All”</h3><p>Update every populated asset row in one run.</p></div>
+          <div class="card"><h3>Private by design</h3><p>Calls go directly from your Sheet to Samsara™—no OsynX servers.</p></div>
+          <div class="card"><h3>Admin friendly</h3><p>Enable or disable instant updates per user.</p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section">
+    <div class="container">
+      <div class="kicker">How it works</div>
+      <h2>From dropdown to live data in four steps</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span><strong>Install</strong> the Sheets™ add-on (unlisted link sent by email).</li>
+        <li><span class="step-num">2</span><strong>Configure</strong> your Samsara™ read-only API token + Org ID in the sidebar.</li>
+        <li><span class="step-num">3</span><strong>Select an asset</strong> to write fresh values and a correct deep link.</li>
+        <li><span class="step-num">4</span><strong>Refresh All</strong> to batch update every populated asset row.</li>
+      </ol>
+
+      <p class="note" style="margin-top:14px">
+        Requires a valid Samsara™ API token with read permissions. Data is fetched on-demand; nothing is stored outside your spreadsheet.
+      </p>
+    </div>
+  </section>
+
+  <!-- Permissions / Scopes -->
+  <section class="section alt">
+    <div class="container">
+      <div class="kicker">Permissions</div>
+      <h2>What OsynX Bridge can access</h2>
+      <div class="grid grid-3" style="margin-top:18px">
+        <div class="card">
+          <h3>Google Sheets™</h3>
+          <p class="muted">Read/write the active spreadsheet to place values and deep links.</p>
+          <p class="note">Scope: <code>.../auth/spreadsheets</code></p>
+        </div>
+        <div class="card">
+          <h3>Sidebar UI</h3>
+          <p class="muted">Render settings and actions in a sidebar/dialog inside Sheets.</p>
+          <p class="note">Scope: <code>.../auth/script.container.ui</code></p>
+        </div>
+        <div class="card">
+          <h3>External request</h3>
+          <p class="muted">Call the Samsara™ HTTPS API to fetch asset/location data.</p>
+          <p class="note">Scope: <code>.../auth/script.external_request</code></p>
+        </div>
+        <div class="card">
+          <h3>Script runtime</h3>
+          <p class="muted">Handle menus, triggers, and execution for add-on actions.</p>
+          <p class="note">Scope: <code>.../auth/script.scriptapp</code></p>
+        </div>
+        <div class="card">
+          <h3>Identity</h3>
+          <p class="muted">Identify the signed-in user for personalization.</p>
+          <p class="note">Scopes: <code>openid</code>, <code>userinfo.email</code>, <code>userinfo.profile</code></p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:16px">
+        OsynX Bridge does <strong>not</strong> access Google Drive™ file content and does <strong>not</strong> store fleet data on OsynX servers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing / CTA -->
+  <section class="section">
+    <div class="container panel" style="text-align:center">
+      <h2>Try OsynX Bridge</h2>
+      <p class="muted" style="margin-bottom:1rem">Private by design, fast in practice. We’ll send you an unlisted install link.</p>
+      <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap">
+        <a class="button" href="mailto:ochyro@osynx.com?subject=Request%20OsynX%20Bridge%20install%20link">Request install link</a>
+        <a class="button secondary" href="support.html">Get support</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container row">
+    <div>© <span id="y"></span> Ochyro Inc</div>
+    <div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></div>
+    <div class="muted">
+      Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara™ is a trademark of its respective owner.
+      OsynX Bridge isn’t affiliated with or endorsed by Google LLC or Samsara™.
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
