@@ -4,7 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Privacy Policy — OsynX Bridge</title>
+  <meta name="description" content="OsynX Bridge Privacy Policy: data accessed, usage, sharing, storage, retention, and deletion. No data leaves your Google account environment."/>
   <link rel="stylesheet" href="/styles.css"/>
+  <link rel="canonical" href="https://osynx.com/privacy.html"/>
 </head>
 <body>
 <header class="site-header">
@@ -12,6 +14,7 @@
     <a class="logo" href="/"><span>Osyn</span>X</a>
     <nav>
       <a href="/">Home</a>
+      <a href="/osynx-bridge.html">OsynX Bridge</a>
       <a href="/support.html">Support</a>
       <a class="active" href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
@@ -20,49 +23,79 @@
 </header>
 
 <main>
-<section class="section">
-  <div class="container">
-    <h2>Privacy Policy</h2>
-    <p class="desc">Last updated: <span id="d"></span></p>
+  <section class="section">
+    <div class="container">
+      <h2>Privacy Policy</h2>
+      <p class="desc">Last updated: <span id="d"></span></p>
 
-    <div class="card">
-      <p class="callout"><strong>Summary:</strong> OsynX Bridge is a Google Sheets™ add-on that connects user spreadsheets to their Samsara™ account. The add-on runs entirely within the user’s Google account environment and does not transmit or store data on OsynX servers.</p>
+      <div class="card">
+        <p class="callout">
+          <strong>Summary:</strong>
+          OsynX Bridge is a Google Sheets™ add-on that connects your spreadsheet to your Samsara™ account.
+          The add-on runs within your Google account; OsynX does not operate backend servers for your fleet data and does not sell your information.
+        </p>
 
-      <h3>1. Data Accessed</h3>
-      <p>The add-on accesses the following Google user data via OAuth scopes:</p>
-      <ul>
-        <li>Google Sheets data to read and write cell values in the active spreadsheet.</li>
-        <li>Basic Google profile information (name, email) for identifying the signed-in user.</li>
-        <li>Apps Script container and locale settings to render sidebar UI and format data correctly.</li>
-      </ul>
-
-      <h3>2. Data Usage</h3>
-      <p>All accessed data is used solely to:
+        <h3>1. Data accessed</h3>
         <ul>
-          <li>Display fleet information from Samsara inside the user’s spreadsheet.</li>
-          <li>Store user configuration (e.g. API token, Org ID) in that spreadsheet’s properties.</li>
-          <li>Render the add-on’s sidebar and update rows when triggered by the user.</li>
+          <li><strong>Google Sheets™ data:</strong> read and write cell values in the active spreadsheet to display fleet information.</li>
+          <li><strong>Basic profile/identity:</strong> your Google account name and email for identifying the signed-in user and showing account-specific UI.</li>
+          <li><strong>Apps Script container & locale:</strong> sidebar/dialog rendering and date/label formatting.</li>
+          <li><strong>User-provided configuration:</strong> Samsara™ API token and Org ID (entered by you) stored with the spreadsheet.</li>
         </ul>
-      </p>
-      <p>No Google user data is used for advertising, analytics, or sold to third parties.</p>
 
-      <h3>3. Data Sharing</h3>
-      <p>OsynX Bridge does not share any Google user data with external parties.  
-         API calls to Samsara™ occur directly between the user’s Sheet and Samsara’s API endpoints over HTTPS.</p>
+        <h3>2. Data usage</h3>
+        <p>
+          Accessed data is used solely to: (a) request read-only data from Samsara™ over HTTPS,
+          (b) write results into your active sheet (including “Open in Samsara™” deep links with a current timestamp),
+          and (c) render settings and actions in the add-on sidebar.
+          <br/>No accessed Google user data is used for analytics, advertising, or profiling.
+        </p>
 
-      <h3>4. Data Storage & Protection</h3>
-      <p>No data from Google Sheets or user profiles is transmitted or stored on OsynX servers.  
-         Configuration values entered by the user are stored locally within that spreadsheet’s properties, protected by Google’s own account security infrastructure.</p>
+        <h3>3. Data sharing</h3>
+        <p>
+          OsynX Bridge <strong>does not share Google user data with any third parties</strong>.
+          API requests to Samsara™ are made directly from your Google Sheet to Samsara’s HTTPS endpoints.
+        </p>
 
-      <h3>5. Data Retention & Deletion</h3>
-      <p>OsynX Bridge does not retain user data. All information remains in the user’s spreadsheet until they delete or modify it.  
-         Users can revoke the add-on’s access anytime via their <a href="https://myaccount.google.com/permissions" target="_blank">Google Account permissions</a>.</p>
+        <h3>4. Data storage & protection</h3>
+        <p>
+          OsynX Bridge does not transmit or store Google user data on OsynX servers.
+          Configuration values you enter (e.g., Samsara™ token, Org ID) are stored in that spreadsheet’s
+          <em>document properties</em> and remain under your Google account control,
+          protected by Google’s account and Workspace security infrastructure.
+        </p>
 
-      <h3>6. Contact</h3>
-      <p>For privacy questions, contact us at <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a>.</p>
+        <h3>5. Data retention & deletion</h3>
+        <p>
+          OsynX Bridge does not retain user data outside your Google account. Data written to the sheet remains
+          until you change or delete it. You can delete configuration by clearing the sheet’s document properties
+          or removing the add-on, and you can revoke access at any time in
+          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account &gt; Security &gt; Third-party access</a>.
+        </p>
+
+        <h3>6. Security</h3>
+        <p>
+          Your Samsara™ token’s permissions determine what can be read. We recommend using read-only tokens
+          and rotating them periodically. All external requests use HTTPS.
+        </p>
+
+        <h3>7. Your choices</h3>
+        <ul>
+          <li>Revoke or rotate your Samsara™ token at any time.</li>
+          <li>Remove the add-on or clear the sheet’s properties to delete configuration.</li>
+          <li>Revoke OsynX Bridge’s OAuth access from your Google Account settings.</li>
+        </ul>
+
+        <h3>8. Contact</h3>
+        <p>Questions? Email <a href="mailto:ochyro@osynx.com">ochyro@osynx.com</a>.</p>
+
+        <p class="note" style="margin-top:10px">
+          Google Sheets™ and Google Workspace™ are trademarks of Google LLC. Samsara™ is a trademark of its respective owner.
+          OsynX Bridge isn’t affiliated with or endorsed by Google LLC or Samsara™.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -72,8 +105,8 @@
 </footer>
 
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-document.getElementById('d').textContent=new Date().toLocaleDateString();
+  document.getElementById('y').textContent = new Date().getFullYear();
+  document.getElementById('d').textContent = new Date().toLocaleDateString();
 </script>
 </body>
 </html>
